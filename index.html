@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Onboarding — Totally Not Evil Corp™</title>
+<meta name="description" content="A satirical corporate onboarding experience. A digital art project for ANTH101." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ LOGIN GATE (client-side only) ============ -->
+<div class="gate" id="gate">
+  <form class="gate-card" id="gateForm">
+    <span class="logo-mark big" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="72" height="72">
+        <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#0fb5a8"/>
+        <polygon points="20,9 30,15 30,25 20,31 10,25 10,15" fill="#ffffff"/>
+        <text x="20" y="25" text-anchor="middle" font-size="11" font-weight="800" fill="#0d6e6e">TNE</text>
+      </svg>
+    </span>
+    <h1>Employee Portal</h1>
+    <p class="gate-sub">Sign in to begin your onboarding.</p>
+    <div class="gate-field">
+      <span>Employee ID</span>
+      <div class="gate-static" aria-hidden="true">new.hire</div>
+    </div>
+    <label class="gate-field">
+      <span>Password</span>
+      <input type="password" id="gatePass" placeholder="••••" autocomplete="off" />
+    </label>
+    <button class="btn primary" type="submit">Sign in →</button>
+    <p class="gate-error" id="gateError" role="alert" hidden>Incorrect password. Please try again.</p>
+  </form>
+</div>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="26" height="26">
+        <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#0fb5a8"/>
+        <polygon points="20,9 30,15 30,25 20,31 10,25 10,15" fill="#ffffff"/>
+        <text x="20" y="25" text-anchor="middle" font-size="11" font-weight="800" fill="#0d6e6e">TNE</text>
+      </svg>
+    </span>
+    <span class="brand-name">Totally&nbsp;Not&nbsp;Evil&nbsp;Corp<sup>™</sup></span>
+  </div>
+  <nav class="steps" id="steps" aria-label="Onboarding progress"></nav>
+</header>
+
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ============ DECK ============ -->
+<main class="deck" id="deck">
+
+  <!-- SLIDE 0 — COVER (the only slide with the big title) -->
+  <section class="slide cover active" data-step="Welcome">
+    <div class="cover-inner">
+      <span class="logo-mark big" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="92" height="92">
+          <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#0fb5a8"/>
+          <polygon points="20,9 30,15 30,25 20,31 10,25 10,15" fill="#ffffff"/>
+          <text x="20" y="25" text-anchor="middle" font-size="11" font-weight="800" fill="#0d6e6e">TNE</text>
+        </svg>
+      </span>
+      <h1>New Employee Onboarding</h1>
+      <p class="cover-sub">for <strong>Totally Not Evil Corp™</strong></p>
+      <button class="btn primary" data-goto="1">Begin →</button>
+    </div>
+  </section>
+
+  <!-- SLIDE 1 — MERIT -->
+  <section class="slide art-slide" data-step="Merit">
+    <h2 class="slogan">Congratulations — you <em>earned</em> this.</h2>
+    <div class="art-frame merit">
+      <span class="confetti" style="top:12%;left:14%">🎉</span>
+      <span class="confetti" style="top:18%;right:16%">🎊</span>
+      <span class="confetti" style="top:30%;left:30%">✨</span>
+      <span class="confetti" style="top:24%;right:32%">✨</span>
+      <div class="podium-scene">
+        <div class="hero">🧑‍💼<span class="medal">🥇</span></div>
+        <div class="podium">
+          <div class="bar b2"></div>
+          <div class="bar b1"></div>
+          <div class="bar b3"></div>
+        </div>
+      </div>
+    </div>
+    <p class="caption">Selected on talent alone. Any setback from here is your own.</p>
+  </section>
+
+  <!-- SLIDE 2 — STAY IN YOUR ROLE / GENDER -->
+  <section class="slide art-slide" data-step="Your Role">
+    <h2 class="slogan">Please stay in your role.</h2>
+    <div class="compare">
+      <div class="col col-f">
+        <div class="figure">👩‍💼</div>
+        <ul class="traits">
+          <li>Collaborative</li>
+          <li>Agreeable</li>
+          <li>Soft-spoken</li>
+        </ul>
+      </div>
+      <div class="vs">vs</div>
+      <div class="col col-m">
+        <div class="figure">👨‍💼</div>
+        <ul class="traits">
+          <li>Authoritative</li>
+          <li>Argumentative</li>
+          <li>Always right</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 — WE ARE ALL EQUAL / RACE -->
+  <section class="slide art-slide" data-step="Equality">
+    <h2 class="slogan">We are all equal here.</h2>
+    <div class="art-frame cafeteria">
+      <div class="row servers">
+        <span>👨🏿‍🍳</span><span>👩🏿‍🍳</span><span>👨🏿‍🍳</span><span>🧑🏿‍🍳</span>
+      </div>
+      <div class="counter">
+        <span>🍽️</span><span>🥗</span><span>🍽️</span><span>🍲</span><span>🍽️</span>
+      </div>
+      <div class="row diners">
+        <span>🧑🏻‍💼</span><span>👩🏼‍💼</span><span>🧑🏻‍💼</span><span>👨🏼‍💼</span>
+      </div>
+    </div>
+    <p class="caption">We don't see race. Everyone has an equal opportunity for advancement.</p>
+  </section>
+
+  <!-- SLIDE 4 — WORKING TOGETHER / PROFIT -->
+  <section class="slide art-slide" data-step="Our Mission">
+    <h2 class="slogan">Above all, we rise together —</h2>
+    <div class="art-frame factory">
+      <div class="exec">
+        <span class="money">💸</span><span class="boss">🤵</span><span class="money">💵</span>
+      </div>
+      <div class="machine">
+        <span class="gear">⚙️</span>
+        <span class="engine-label">SYNERGY ENGINE™</span>
+        <span class="gear">⚙️</span>
+      </div>
+      <div class="row workers">
+        <span>🧑‍🏭<span class="coin">🪙</span></span>
+        <span>👩‍🏭<span class="coin">🪙</span></span>
+        <span>🧑‍🏭<span class="coin">🪙</span></span>
+        <span>👨‍🏭<span class="coin">🪙</span></span>
+      </div>
+    </div>
+    <p class="megacaption">to make as much money as possible.</p>
+  </section>
+
+  <!-- SLIDE 5 — CLOSING -->
+  <section class="slide cover" data-step="Welcome">
+    <div class="cover-inner">
+      <h1>Welcome to the family. 🎉</h1>
+      <p class="cover-sub">You may now begin reproducing this culture<br/>for everyone who comes after you.</p>
+      <button class="btn ghost" data-goto="0">↺ Start over</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER NAV ============ -->
+<footer class="navbar" id="navbar">
+  <button class="btn ghost" id="prevBtn">← Back</button>
+  <span class="slide-count" id="slideCount"></span>
+  <button class="btn primary" id="nextBtn">Next →</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
