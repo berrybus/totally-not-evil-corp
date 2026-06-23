@@ -66,8 +66,8 @@ body{
 .gate-error{color:#d6336c;font-size:13px;font-weight:600;margin:10px 0 0;}
 
 /* ---------- TOP BAR ---------- */
+.app-header{position:sticky;top:0;z-index:30;}
 .topbar{
-  position:sticky;top:0;z-index:30;
   display:flex;align-items:center;gap:12px;
   padding:10px 16px;
   background:#fff;border-bottom:1px solid var(--line);
@@ -86,7 +86,7 @@ body{
 .step.done{color:var(--teal-d);background:#dff6f3;}
 .step.current{color:#fff;background:var(--teal);}
 
-.progress-track{height:4px;background:#e6e9ef;position:sticky;top:53px;z-index:29;}
+.progress-track{height:4px;background:#e6e9ef;}
 .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--accent));transition:width .4s ease;}
 
 /* ---------- DECK / SLIDES ---------- */
@@ -214,7 +214,6 @@ body{
   .brand-name{font-size:15px;}
   .brand-name sup{font-size:9px;}
   .steps{display:flex;}
-  .progress-track{top:57px;}
   .deck{padding:30px 26px 48px;}
   .slogan{margin:6px 0 26px;}
 
